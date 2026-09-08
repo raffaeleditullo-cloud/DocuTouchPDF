@@ -1444,11 +1444,14 @@
       if (projects.length === 0) {
         projectsGrid.innerHTML = `
           <div class="project-empty-state">
-            <div style="font-size: 44px; margin-bottom: 12px;">📁</div>
-            <h3 style="color:#fff; font-size: 18px; margin-bottom: 6px;">Nessun progetto trovato</h3>
-            <p style="color:var(--text-muted); font-size: 13.5px; margin-bottom: 20px;">Trascina un file PDF nell'area sopra oppure clicca sul pulsante qui sotto per iniziare.</p>
-            <button class="toolbar-btn btn-primary" onclick="document.getElementById('dash-file-input').click();">
-              + Crea Nuovo Progetto PDF
+            <div class="kpi-icon-circle bg-pastel-blue" style="width: 64px; height: 64px; margin-bottom: 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Nessun progetto trovato</h3>
+            <p>Trascina un file PDF nell'area sopra oppure clicca sul pulsante qui sotto per iniziare subito.</p>
+            <button class="toolbar-btn btn-google-primary" onclick="document.getElementById('dash-file-input').click();">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>Crea Nuovo Progetto PDF</span>
             </button>
           </div>
         `;
@@ -1468,23 +1471,26 @@
           <div class="project-info">
             <div class="project-name" title="${p.name}">${p.name}</div>
             <div class="project-meta">
-              <span>🕒 ${dateFormatted}</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>${dateFormatted}</span>
             </div>
             <div class="project-badges">
               <span class="project-badge ${p.signaturesCount > 0 ? 'success' : ''}">✍️ ${p.signaturesCount} ${p.signaturesCount === 1 ? 'Firma' : 'Firme'}</span>
               ${p.datesCount > 0 ? `<span class="project-badge">📅 ${p.datesCount} ${p.datesCount === 1 ? 'Data' : 'Date'}</span>` : ''}
             </div>
             <div class="project-actions">
-              <button class="toolbar-btn btn-primary btn-open-proj" data-id="${p.id}" title="Riapri nell'editor">
-                <span>📂 Apri</span>
+              <button class="toolbar-btn btn-google-primary btn-open-proj" data-id="${p.id}" title="Riapri nell'editor">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <span>Apri</span>
               </button>
               ${p.hasSignedPdf ? `
-                <a href="/api/projects/${p.id}/download" class="toolbar-btn btn-success" style="text-decoration:none;" title="Scarica PDF finale firmato">
-                  <span>📥 Scarica</span>
+                <a href="/api/projects/${p.id}/download" class="toolbar-btn btn-google-emerald" style="text-decoration:none;" title="Scarica PDF finale firmato">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Scarica</span>
                 </a>
               ` : ''}
-              <button class="btn-delete-proj" data-id="${p.id}" title="Elimina progetto dall'archivio">
-                🗑️
+              <button class="btn-delete-proj" data-id="${p.id}" title="Elimina definitivamente dall'archivio">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
               </button>
             </div>
           </div>

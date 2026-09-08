@@ -3,107 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DocuTouchPDF - Suite Professionale di Firma & Gestione PDF</title>
+  <title>DocuTouchPDF PRO - Suite Professionale di Firma & Gestione PDF</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- ========================================== -->
-  <!-- BARRA SUPERIORE (HEADER SUITE DINAMICO)   -->
+  <!-- BARRA SUPERIORE (STREET LUXURY GOOGLE NAV) -->
   <!-- ========================================== -->
   <header class="app-header">
-    <div class="brand" id="brand-home-btn" title="Vai alla Dashboard Principale">
-      <img src="assets/logo.png" class="brand-logo-img" alt="DocuTouchPDF Logo">
-      <div class="brand-title">
-        DocuTouch<span class="brand-highlight">PDF</span>
+    
+    <!-- Brand / Logo Ufficiale -->
+    <div class="brand" id="brand-home-btn" title="Torna alla Dashboard">
+      <div class="brand-logo-container">
+        <img src="assets/logo.png" class="brand-logo-img" alt="DocuTouchPDF Logo">
       </div>
-      <span class="brand-badge-pro">PRO v1.0</span>
+      <div class="brand-text-block">
+        <div class="brand-title">
+          DocuTouch<span class="brand-highlight">PDF</span>
+        </div>
+        <span class="brand-badge-luxury">PRO // OS 1.0</span>
+      </div>
     </div>
 
-    <!-- Navigazione Principale delle Viste (Adattiva) -->
+    <!-- Navigazione Google Segmented Pills -->
     <nav class="suite-nav">
       <button id="nav-btn-dashboard" class="suite-nav-btn active" title="Dashboard dei Progetti">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <svg class="nav-icon nav-icon-blue" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
         <span class="nav-text">Dashboard</span>
         <span class="nav-counter-pill" id="nav-projects-count">0</span>
       </button>
 
       <button id="nav-btn-editor" class="suite-nav-btn" title="Editor Documento">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        <svg class="nav-icon nav-icon-emerald" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         <span class="nav-text">Editor</span>
         <span class="nav-status-badge" id="editor-status-badge">Nessun PDF</span>
       </button>
 
-      <button id="nav-btn-touchpad" class="suite-nav-btn" title="Touchpad Firma su PC">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      <button id="nav-btn-touchpad" class="suite-nav-btn" title="Touchpad Firma Digitale">
+        <svg class="nav-icon nav-icon-purple" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
         <span class="nav-text">Touchpad PC</span>
       </button>
 
       <button id="nav-btn-help" class="suite-nav-btn" title="Guida & Scorciatoie">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <svg class="nav-icon nav-icon-amber" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
         <span class="nav-text">Guida</span>
       </button>
     </nav>
 
-    <!-- Menù a Tendina Accessibili & Azioni Rapide -->
+    <!-- Azioni Top Bar & Dropdown -->
     <div class="header-actions">
 
-      <!-- Menù a Tendina: Documento / File (Accessibile) -->
+      <!-- Dropdown Documento -->
       <div class="dropdown" id="dropdown-doc">
-        <button class="dropdown-toggle toolbar-btn" id="btn-dropdown-doc" aria-haspopup="true" aria-expanded="false" title="Menu Documento e Opzioni">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+        <button class="dropdown-toggle toolbar-btn btn-luxury-outline" id="btn-dropdown-doc" aria-haspopup="true" aria-expanded="false" title="Menu Documento e Opzioni">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
           <span class="btn-text">Documento</span>
           <svg class="dropdown-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="dropdown-menu" id="menu-dropdown-doc" role="menu">
           <button class="dropdown-item" id="item-doc-new" role="menuitem">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg class="item-svg-blue" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
             <span>Nuovo Progetto PDF</span>
             <kbd>Sfoglia</kbd>
           </button>
           <button class="dropdown-item" id="item-doc-sample" role="menuitem">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><circle cx="12" cy="13" r="2"></circle></svg>
+            <svg class="item-svg-purple" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><circle cx="12" cy="13" r="2"></circle></svg>
             <span>Prova Contratto Demo</span>
           </button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" id="item-doc-save" role="menuitem" disabled>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+            <svg class="item-svg-amber" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
             <span>Salva Progetto</span>
             <kbd>Ctrl+S</kbd>
           </button>
           <button class="dropdown-item" id="item-doc-print" role="menuitem" disabled>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <svg class="item-svg-indigo" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
             <span>Stampa Documento</span>
             <kbd>Ctrl+P</kbd>
           </button>
-          <button class="dropdown-item item-highlight" id="item-doc-download" role="menuitem" disabled>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <button class="dropdown-item item-highlight-success" id="item-doc-download" role="menuitem" disabled>
+            <svg class="item-svg-green" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             <span>Scarica PDF Firmato</span>
           </button>
           <div class="dropdown-divider"></div>
-          <button class="dropdown-item item-danger" id="item-doc-quit" role="menuitem" title="Arresta il server e chiudi l'applicazione">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+          <button class="dropdown-item item-danger-coral" id="item-doc-quit" role="menuitem" title="Arresta il server e chiudi l'applicazione">
+            <svg class="item-svg-red" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
             <span>Esci dall'Applicazione</span>
           </button>
         </div>
       </div>
 
-      <!-- Controlli Attivi nell'Editor (visibili solo in modalità Editor) -->
+      <!-- Controlli Attivi nell'Editor -->
       <div id="editor-actions-group" class="editor-actions-group" style="display: none;">
         
-        <!-- Toggle Drawer Laterale (Apri/Chiudi) -->
-        <button id="btn-toggle-drawer" class="toolbar-btn btn-ghost drawer-toggle-btn" title="Apri/Chiudi Barra Laterale (Ctrl+B)">
-          <svg class="sidebar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+        <!-- Toggle Drawer Laterale -->
+        <button id="btn-toggle-drawer" class="toolbar-btn btn-luxury-ghost drawer-toggle-btn" title="Apri/Chiudi Barra Laterale (Ctrl+B)">
+          <svg class="sidebar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
           <span class="btn-text">Barra Laterale</span>
         </button>
 
-        <!-- Menù a Tendina: Strumenti Editor (Accessibile) -->
+        <!-- Menu Strumenti Editor -->
         <div class="dropdown" id="dropdown-tools">
-          <button class="dropdown-toggle toolbar-btn" id="btn-dropdown-tools" aria-haspopup="true" aria-expanded="false" title="Seleziona Strumento di Annotazione">
+          <button class="dropdown-toggle toolbar-btn btn-luxury-outline" id="btn-dropdown-tools" aria-haspopup="true" aria-expanded="false" title="Seleziona Strumento">
             <span id="selected-tool-icon">✍️</span>
             <span class="btn-text" id="selected-tool-label">Firma</span>
             <svg class="dropdown-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -131,53 +137,53 @@
           </div>
         </div>
 
-        <!-- Pulsante Download Diretto ad Alta Visibilità -->
-        <button id="btn-download-pdf" class="toolbar-btn btn-success" disabled title="Esporta documento definitivo ad alta fedeltà">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <!-- Scarica PDF Firmato (Bottone Verde Google Smeraldo) -->
+        <button id="btn-download-pdf" class="toolbar-btn btn-google-emerald" disabled title="Esporta PDF firmato ad alta fedeltà">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           <span class="btn-text">Scarica PDF</span>
         </button>
 
-        <!-- Pulsanti Salva e Stampa (mantenuti per compatibilità) -->
-        <button id="btn-save-project" class="toolbar-btn btn-save" disabled title="Salva nell'archivio locale (Ctrl+S)" style="display: none;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
-          <span class="btn-text">Salva</span>
-        </button>
-        <button id="btn-print-doc" class="toolbar-btn" disabled title="Stampa documento (Ctrl+P)" style="display: none;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-          <span class="btn-text">Stampa</span>
-        </button>
-
         <!-- Torna alla Dashboard -->
-        <button id="btn-back-to-dashboard" class="toolbar-btn btn-ghost" title="Torna alla Dashboard principale">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <button id="btn-back-to-dashboard" class="toolbar-btn btn-luxury-ghost" title="Torna alla Dashboard principale">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"></polyline></svg>
           <span class="btn-text">Dashboard</span>
         </button>
+
+        <!-- Pulsanti Salva e Stampa nascosti per compatibilità JS -->
+        <button id="btn-save-project" style="display: none;"></button>
+        <button id="btn-print-doc" style="display: none;"></button>
       </div>
 
-      <!-- Menù a Tendina: Dispositivo Smartphone / Tablet (Accessibile) -->
+      <!-- Menù Dispositivo Smartphone (Pillola di Stato Luxury) -->
       <div class="dropdown" id="dropdown-device">
         <button class="header-phone-status dropdown-toggle" id="header-phone-status-pill" aria-haspopup="true" aria-expanded="false" title="Stato accoppiamento smartphone touch">
-          <span id="desktop-status-dot" class="status-dot"></span>
+          <span id="desktop-status-dot" class="status-dot-pulse"></span>
           <span id="desktop-status-text" class="phone-status-label">Smartphone in attesa...</span>
           <svg class="dropdown-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div class="dropdown-menu dropdown-menu-right" id="menu-dropdown-device" role="menu" style="width: 290px; padding: 16px;">
-          <div style="font-size: 13.5px; font-weight: 700; margin-bottom: 4px; color: #fff;">📱 Touchscreen Smartphone</div>
-          <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;">Inquadra questo QR per trasformare il tuo telefono in tavoletta grafica per firmare:</p>
-          <div style="background: #ffffff; padding: 12px; border-radius: 12px; text-align: center; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-            <img id="header-qr-img" src="" alt="QR Pairing" style="width: 150px; height: 150px; display: inline-block;">
+        <div class="dropdown-menu dropdown-menu-right device-popover-card" id="menu-dropdown-device" role="menu">
+          <div class="popover-device-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>Touchscreen Smartphone</span>
           </div>
-          <div style="display: flex; gap: 6px;">
-            <input type="text" id="header-direct-url" readonly value="Caricamento..." style="flex:1; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:6px 8px; font-size:11px; color:#cbd5e1;">
-            <button type="button" class="btn-copy-url" id="btn-copy-header-url" style="font-size:11.5px; padding:6px 10px; border-radius:6px; background:#3b82f6; color:#fff; border:none; cursor:pointer; font-weight:600;">Copia</button>
+          <p class="popover-device-desc">Inquadra per usare il telefono come tavoletta grafica touch a 60 fps:</p>
+          <div class="popover-qr-frame">
+            <img id="header-qr-img" src="" alt="QR Pairing">
+          </div>
+          <div class="popover-url-row">
+            <input type="text" id="header-direct-url" readonly value="Caricamento...">
+            <button type="button" class="btn-copy-url" id="btn-copy-header-url">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copia</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Pulsante primario sempre visibile in Dashboard -->
+      <!-- Pulsante Primario Dashboard: Nuovo Progetto (Google Royal Blue) -->
       <div id="dashboard-actions-group">
-        <button id="btn-header-new-project" class="toolbar-btn btn-primary" title="Carica un nuovo documento PDF da firmare">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        <button id="btn-header-new-project" class="toolbar-btn btn-google-primary" title="Carica un nuovo documento PDF da firmare">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           <span class="btn-text">Nuovo Progetto PDF</span>
         </button>
       </div>
@@ -186,107 +192,131 @@
   </header>
 
   <!-- ========================================== -->
-  <!-- VISTA 1: DASHBOARD COMPLETA (DEFAULT)       -->
+  <!-- VISTA 1: DASHBOARD COMPLETA (LIGHT LUXURY) -->
   <!-- ========================================== -->
   <div class="dashboard-page" id="view-dashboard">
     <div class="dashboard-container-full">
 
-      <!-- Hero di Benvenuto & Presentazione -->
+      <!-- Hero di Benvenuto Street Luxury -->
       <section class="dashboard-hero">
         <div class="hero-content">
-          <div class="hero-badge">
-            <span class="hero-pulse-dot"></span>
-            100% Offline & Riservato su questo PC
+          <div class="hero-badge-street">
+            <span class="hero-live-indicator"></span>
+            <span>DOCUTOUCH // OS SUITE 1.0</span>
+            <span class="badge-separator">/</span>
+            <span class="badge-accent">100% OFFLINE LOCAL</span>
           </div>
           <h1 class="hero-title">
-            Firma e Annota i tuoi PDF con il tuo <span class="hero-gradient-text">Touchscreen</span>
+            Firma e Annota i tuoi PDF <span class="hero-gradient-text">con il tuo Touchscreen</span>
           </h1>
           <p class="hero-subtitle">
-            Usa il tuo smartphone come tavoletta grafica di precisione: clicca sul foglio e firma col dito a 60 fps.
+            Trasforma il tuo smartphone o tablet in una tavoletta grafica di precisione: clicca sul foglio sul PC e traccia la firma col dito a 60 fps con inchiostro vettoriale privo di scalettature.
           </p>
         </div>
 
-        <!-- 4 KPI Fluidi (Grid Dinamica) -->
+        <!-- 4 KPI Metriche Spaziose (Google Palette & Cerchi Pastello) -->
         <div class="kpi-grid">
-          <div class="kpi-card">
-            <div class="kpi-icon-box blue">📁</div>
+          
+          <div class="kpi-card kpi-card-blue">
+            <div class="kpi-icon-circle bg-pastel-blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
             <div class="kpi-data">
               <div class="kpi-value" id="stat-total-projects">0</div>
               <div class="kpi-label">Progetti Totali</div>
             </div>
           </div>
-          <div class="kpi-card">
-            <div class="kpi-icon-box green">✅</div>
+
+          <div class="kpi-card kpi-card-green">
+            <div class="kpi-icon-circle bg-pastel-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
             <div class="kpi-data">
               <div class="kpi-value" id="stat-signed-projects">0</div>
               <div class="kpi-label">Documenti Firmati</div>
             </div>
           </div>
-          <div class="kpi-card">
-            <div class="kpi-icon-box amber">⏳</div>
+
+          <div class="kpi-card kpi-card-amber">
+            <div class="kpi-icon-circle bg-pastel-amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
             <div class="kpi-data">
               <div class="kpi-value" id="stat-draft-projects">0</div>
               <div class="kpi-label">In Lavorazione</div>
             </div>
           </div>
-          <div class="kpi-card">
-            <div class="kpi-icon-box purple">✍️</div>
+
+          <div class="kpi-card kpi-card-purple">
+            <div class="kpi-icon-circle bg-pastel-purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+            </div>
             <div class="kpi-data">
               <div class="kpi-value" id="stat-total-signatures">0</div>
               <div class="kpi-label">Firme & Date Apposte</div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <!-- Hub di Creazione Rapida & Dispositivi -->
+      <!-- Hub di Creazione & Dispositivi (Due Macro Card Ben Distanziate) -->
       <section class="creation-hub-grid">
         
-        <!-- Dropzone Interattivo per Nuovo Progetto -->
+        <!-- Box Sinistro: Dropzone Creazione Documento -->
         <div class="hub-card hub-dropzone-card" id="dash-dropzone">
           <input type="file" id="dash-file-input" accept="application/pdf" style="display: none;">
-          <div class="hub-card-icon-halo">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          <div class="dropzone-halo-icon">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
           </div>
           <h3 class="hub-card-title">Crea Nuovo Progetto PDF</h3>
           <p class="hub-card-desc">
-            Trascina qui qualsiasi file PDF dal tuo computer oppure fai clic per sfogliare i documenti.
+            Trascina qui qualsiasi file PDF dal tuo computer oppure fai clic sui pulsanti per iniziare la compilazione.
           </p>
           <div class="hub-card-actions">
-            <button type="button" class="toolbar-btn btn-primary" id="btn-dash-select-file">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <button type="button" class="toolbar-btn btn-google-primary btn-large-hero" id="btn-dash-select-file">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
               <span>Seleziona File PDF</span>
             </button>
-            <button type="button" class="toolbar-btn btn-ghost" id="btn-dash-sample">
-              <span>📄 Prova Contratto Demo</span>
+            <button type="button" class="toolbar-btn btn-street-dark btn-large-hero" id="btn-dash-sample">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Prova Contratto Demo</span>
             </button>
           </div>
         </div>
 
-        <!-- Centro Accoppiamento Smartphone Touchpad -->
+        <!-- Box Destro: Centro Accoppiamento Smartphone Touchpad -->
         <div class="hub-card hub-device-card">
           <div class="device-card-header">
             <div class="device-header-left">
-              <div class="hub-mini-icon">📱</div>
+              <div class="device-icon-halo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
               <div>
-                <h3 class="hub-card-title" style="margin: 0; font-size: 15.5px;">Touchscreen Smartphone</h3>
-                <span class="device-status-badge" id="dash-device-badge">In attesa di scansione</span>
+                <h3 class="hub-card-title" style="margin:0; font-size:16px;">Touchscreen Smartphone</h3>
+                <span class="device-status-pill" id="dash-device-badge">In attesa di scansione</span>
               </div>
             </div>
           </div>
 
           <div class="device-card-body">
-            <div class="device-qr-box">
+            <div class="device-qr-luxury-frame">
               <img id="dash-qr-img" src="" alt="QR per smartphone">
             </div>
             <div class="device-info-text">
-              <p>Inquadra per usare il telefono come <strong>tavoletta touch live a 60 fps</strong>.</p>
+              <p>Inquadra con la fotocamera per usare il telefono come <strong>tavoletta touch live a 60 fps</strong>.</p>
               <div class="device-direct-link-box">
                 <input type="text" id="dash-direct-url" readonly value="Caricamento...">
-                <button type="button" class="btn-copy-url" id="btn-copy-device-url" title="Copia indirizzo">Copia</button>
+                <button type="button" class="btn-copy-url" id="btn-copy-device-url" title="Copia link rapido">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copia</span>
+                </button>
               </div>
-              <div style="margin-top: 10px;">
-                <a href="/touchpad.html" target="_blank" class="link-open-pad-pc">✍️ Apri Touchpad su schermo PC</a>
+              <div class="device-action-footer">
+                <a href="/touchpad.html" target="_blank" class="link-open-pad-pc">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                  <span>Apri Touchpad su schermo PC</span>
+                </a>
               </div>
             </div>
           </div>
@@ -294,31 +324,35 @@
 
       </section>
 
-      <!-- Sezione Archivio Progetti (I Miei Documenti) -->
+      <!-- Sezione Archivio Documenti (I Miei Progetti Salvati) -->
       <section class="dashboard-projects-section">
         <div class="projects-section-header">
           <div>
             <h2 class="section-title">I Miei Progetti Salvati</h2>
-            <p class="section-subtitle">Archivio permanente su disco: riprendi la compilazione o riscarica i PDF firmati.</p>
+            <p class="section-subtitle">Archivio permanente su disco locale: riprendi la compilazione o riscarica i PDF firmati.</p>
           </div>
 
           <div class="projects-toolbar-actions">
-            <!-- Barra di Ricerca Dinamica -->
+            <!-- Barra di Ricerca Google Style -->
             <div class="search-input-wrapper">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               <input type="text" id="dashboard-search-input" placeholder="Cerca progetto per nome...">
             </div>
 
-            <!-- Filtri a Pillola -->
+            <!-- Filtri a Capsula Google / Street -->
             <div class="filter-pills">
               <button class="filter-pill active" data-filter="all" id="filter-pill-all">Tutti (<span id="filter-count-all">0</span>)</button>
-              <button class="filter-pill" data-filter="signed" id="filter-pill-signed">✅ Firmati (<span id="filter-count-signed">0</span>)</button>
-              <button class="filter-pill" data-filter="drafts" id="filter-pill-drafts">⏳ Bozze (<span id="filter-count-drafts">0</span>)</button>
+              <button class="filter-pill" data-filter="signed" id="filter-pill-signed">
+                <span class="dot-filter-green">●</span> Firmati (<span id="filter-count-signed">0</span>)
+              </button>
+              <button class="filter-pill" data-filter="drafts" id="filter-pill-drafts">
+                <span class="dot-filter-amber">●</span> Bozze (<span id="filter-count-drafts">0</span>)
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Griglia dei Documenti Salvati (Fluida) -->
+        <!-- Griglia dei Documenti Salvati (Dinamica) -->
         <div class="projects-grid" id="projects-grid">
           <!-- Popolato dinamicamente da desktop.js -->
         </div>
@@ -332,16 +366,19 @@
   <!-- ========================================== -->
   <div class="main-container" id="view-editor" style="display: none;">
     
-    <!-- Sfondo oscurato per chiusura drawer su tablet/mobile -->
+    <!-- Sfondo oscurato per chiusura drawer su mobile/tablet -->
     <div class="drawer-backdrop" id="drawer-backdrop"></div>
 
-    <!-- Barra Laterale (Drawer Collassabile) -->
+    <!-- Barra Laterale (Drawer Collassabile White Luxury) -->
     <aside class="sidebar" id="editor-sidebar">
       
       <!-- Testata del Drawer -->
       <div class="drawer-header">
         <div class="drawer-doc-info">
-          <div class="drawer-file-tag">📄 Documento Attivo</div>
+          <div class="drawer-file-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <span>Documento Attivo</span>
+          </div>
           <div id="editor-filename-display" class="editor-filename-text" title="Nome file aperto">
             Nessun file aperto
           </div>
@@ -351,15 +388,16 @@
         </button>
       </div>
 
-      <!-- Pulsante Ritorno Dashboard Rapido -->
+      <!-- Pulsante Ritorno Rapido Dashboard -->
       <button id="btn-editor-back-dash" class="btn-sidebar-back">
-        ← Torna alla Dashboard
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <span>Torna alla Dashboard</span>
       </button>
 
       <!-- Elementi Applicati sul Documento -->
       <div class="drawer-section">
         <div class="drawer-section-title">
-          <span>📋 Elementi Inseriti</span>
+          <span>Elementi Inseriti</span>
           <span class="drawer-counter-badge" id="badge-elements-count">0</span>
         </div>
         <div id="applied-signatures-list" class="applied-items-list">
@@ -370,26 +408,26 @@
       <!-- Guida Dinamica Strumento -->
       <div class="drawer-section drawer-tool-guide" id="tool-instructions">
         <div id="tool-instruct-text">
-          <strong style="color: #60a5fa;">✍️ Modalità Firma Attiva:</strong><br>
+          <strong style="color: #2563EB;">✍️ Modalità Firma Attiva:</strong><br>
           Fai clic sul documento nel punto esatto dove vuoi firmare: apparirà subito il QR Code!
         </div>
       </div>
 
       <!-- Scorciatoie Rapide -->
       <div class="drawer-section drawer-shortcuts-box">
-        <div class="drawer-section-title" style="margin-bottom: 8px;">⌨️ Scorciatoie Rapide</div>
-        <div class="shortcut-row"><kbd>Ctrl+B</kbd> <span>Apri/Chiudi Drawer</span></div>
+        <div class="drawer-section-title" style="margin-bottom: 8px;">Scorciatoie Rapide</div>
+        <div class="shortcut-row"><kbd>Ctrl+B</kbd> <span>Apri/Chiudi Barra Laterale</span></div>
         <div class="shortcut-row"><kbd>Ctrl+S</kbd> <span>Salva progetto</span></div>
         <div class="shortcut-row"><kbd>Ctrl+P</kbd> <span>Stampa PDF</span></div>
-        <div class="shortcut-row"><kbd>↑ ↓ ← →</kbd> <span>Micro-allinea data</span></div>
+        <div class="shortcut-row"><kbd>↑ ↓ ← →</kbd> <span>Micro-allinea data (1px)</span></div>
         <div class="shortcut-row"><kbd>Esc</kbd> <span>Chiudi finestre</span></div>
       </div>
 
       <!-- Miniature Pagine Rapide -->
       <div class="drawer-section drawer-pages-section">
-        <div class="drawer-section-title">📑 Pagine del Documento</div>
+        <div class="drawer-section-title">Pagine del Documento</div>
         <div id="thumbnails-container" class="thumbnails-list">
-          <div style="font-size: 12px; color: var(--text-muted); text-align: center; padding: 20px 0;">
+          <div style="font-size: 12.5px; color: var(--text-muted); text-align: center; padding: 24px 0;">
             Carica un file PDF per visualizzare le miniature
           </div>
         </div>
@@ -397,13 +435,13 @@
 
     </aside>
 
-    <!-- Mini-linguetta Fluttuante per Riaprire il Drawer quando è Collassato -->
+    <!-- Linguetta Fluttuante per Riaprire il Drawer quando è Chiuso -->
     <button id="drawer-floating-trigger" class="drawer-floating-trigger" title="Riapri barra laterale (Ctrl+B)">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
       <span class="trigger-label">Pagine</span>
     </button>
 
-    <!-- Area Viewer PDF a Schermo Intero (Fluida ed immersiva) -->
+    <!-- Area Viewer PDF (Foglio con Ombra Naturale su Canvas Chiaro) -->
     <main class="viewer-container" id="viewer-container">
       <div class="pdf-viewport-wrapper" id="viewport-wrapper" style="display: none;">
         <canvas id="pdf-canvas"></canvas>
@@ -427,7 +465,7 @@
       <button id="btn-prev-page" class="floating-btn" title="Pagina precedente">◀</button>
       <span id="page-num-display" class="page-indicator">Pagina 1 / 1</span>
       <button id="btn-next-page" class="floating-btn" title="Pagina successiva">▶</button>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
+      <span class="floating-sep">|</span>
       <button id="btn-zoom-out" class="floating-btn" title="Riduci">-</button>
       <span id="zoom-display" class="page-indicator">100%</span>
       <button id="btn-zoom-in" class="floating-btn" title="Ingrandisci">+</button>
@@ -443,10 +481,11 @@
       <div class="suite-page-header">
         <div>
           <h1 class="suite-page-title">Touchpad Firma Digitale</h1>
-          <p class="suite-page-subtitle">Testa la sensibilità del tratto o firma direttamente su questo schermo</p>
+          <p class="suite-page-subtitle">Disegna e testa il tratto ad alta risoluzione o esporta la tua firma trasparente</p>
         </div>
-        <button class="toolbar-btn btn-ghost" onclick="document.getElementById('nav-btn-dashboard').click();">
-          ← Torna alla Dashboard
+        <button class="toolbar-btn btn-luxury-outline" onclick="document.getElementById('nav-btn-dashboard').click();">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Torna alla Dashboard</span>
         </button>
       </div>
 
@@ -454,39 +493,36 @@
         <div class="standalone-pad-card">
           <div class="pad-card-topbar">
             <div class="ink-selector">
-              <span>Colore Tratto:</span>
-              <button class="ink-btn-opt active" data-color="#0f172a" style="background:#0f172a;" title="Nero"></button>
+              <span class="ink-label">Colore Inchiostro:</span>
+              <button class="ink-btn-opt active" data-color="#0f172a" style="background:#0f172a;" title="Nero Ossidiana"></button>
               <button class="ink-btn-opt" data-color="#1d4ed8" style="background:#1d4ed8;" title="Blu Firma"></button>
               <button class="ink-btn-opt" data-color="#dc2626" style="background:#dc2626;" title="Rosso"></button>
             </div>
             <div class="pad-card-actions">
-              <button id="btn-clear-standalone-pad" class="toolbar-btn btn-ghost">🗑️ Cancella</button>
-              <button id="btn-download-standalone-sign" class="toolbar-btn btn-primary">💾 Esporta Firma PNG</button>
+              <button id="btn-clear-standalone-pad" class="toolbar-btn btn-luxury-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                <span>Cancella</span>
+              </button>
+              <button id="btn-download-standalone-sign" class="toolbar-btn btn-google-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Esporta Firma PNG</span>
+              </button>
             </div>
           </div>
           <div class="standalone-canvas-box">
             <canvas id="standalone-sig-canvas"></canvas>
             <div class="standalone-guide-line"></div>
-            <div class="standalone-guide-hint">Firma qui sopra con mouse, penna o touchscreen</div>
+            <div class="standalone-guide-hint">Traccia qui la tua firma con mouse, pennino o display touch</div>
           </div>
         </div>
 
         <div class="standalone-sidebar-info">
           <div class="info-card-block">
-            <h3>📱 Firma con lo Smartphone</h3>
-            <p>Non serve installare nessuna app: inquadra il QR Code per trasformare il tuo telefono in una tavoletta touch sincronizzata.</p>
+            <h3>📱 Connetti Smartphone</h3>
+            <p>Inquadra per usare il telefono come tavoletta sincronizzata al millimetro.</p>
             <div class="standalone-qr-container">
               <img id="standalone-qr-img" src="" alt="QR">
             </div>
-          </div>
-
-          <div class="info-card-block">
-            <h3>✨ Tratto ad Alta Fedeltà</h3>
-            <ul class="feature-checklist">
-              <li>Curve di Bézier per massima fluidità del tratto</li>
-              <li>Compensazione della velocità del movimento</li>
-              <li>Esportazione PNG trasparente vettorializzata</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -494,60 +530,56 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- VISTA 4: GUIDA RAPIDA & INFO SISTEMA       -->
+  <!-- VISTA 4: GUIDA & PRIVACY LOCALE            -->
   <!-- ========================================== -->
   <div class="suite-page-container" id="view-help" style="display: none;">
     <div class="suite-page-inner">
       <div class="suite-page-header">
         <div>
-          <h1 class="suite-page-title">Guida & Informazioni</h1>
-          <p class="suite-page-subtitle">Tutto quello che c'è da sapere sull'uso di DocuTouchPDF</p>
+          <h1 class="suite-page-title">Guida & Scorciatoie</h1>
+          <p class="suite-page-subtitle">Tutto quello che c'è da sapere su DocuTouchPDF Suite</p>
         </div>
-        <button class="toolbar-btn btn-ghost" onclick="document.getElementById('nav-btn-dashboard').click();">
-          ← Torna alla Dashboard
+        <button class="toolbar-btn btn-luxury-outline" onclick="document.getElementById('nav-btn-dashboard').click();">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Torna alla Dashboard</span>
         </button>
       </div>
 
-      <div class="help-sections-grid">
-        <!-- Guida Rapida 3 Step -->
-        <div class="help-guide-card">
-          <h2>🚀 Come Funziona in 3 Semplici Passaggi</h2>
-          <div class="guide-steps-list">
-            <div class="guide-step-item">
-              <div class="step-badge">1</div>
-              <div class="step-text">
-                <strong>Carica il documento PDF</strong>
-                <p>Dalla Dashboard, trascina il tuo file PDF nella casella o clicca su "Nuovo Progetto PDF". Il documento si aprirà ad alta risoluzione nell'Editor.</p>
-              </div>
-            </div>
-            <div class="guide-step-item">
-              <div class="step-badge">2</div>
-              <div class="step-text">
-                <strong>Clicca sul punto di firma</strong>
-                <p>Con lo strumento ✍️ Firma attivo, fai clic esattamente sopra la riga di firma desiderata. Apparirà un QR Code: inquadralo con lo smartphone.</p>
-              </div>
-            </div>
-            <div class="guide-step-item">
-              <div class="step-badge">3</div>
-              <div class="step-text">
-                <strong>Firma col dito sul telefono e conferma</strong>
-                <p>Traccia la tua firma sullo schermo touch del telefono e premi "Conferma Firma". La firma si posiziona all'istante al millimetro sul PDF del computer!</p>
-              </div>
-            </div>
+      <div class="help-content-grid">
+        <div class="help-card">
+          <div class="help-card-icon bg-pastel-blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
           </div>
+          <h3>1. Firma con lo Smartphone</h3>
+          <p>Fai clic sul documento nel punto esatto desiderato: compare il QR Code, inquadralo col telefono e firma col dito a 60 fps in tempo reale.</p>
         </div>
 
-        <!-- Scorciatoie da Tastiera -->
-        <div class="help-guide-card">
-          <h2>⌨️ Scorciatoie da Tastiera</h2>
+        <div class="help-card">
+          <div class="help-card-icon bg-pastel-green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>2. Inserisci Data Scrivibile</h3>
+          <p>Attiva lo strumento Data, clicca sul foglio e la data odierna apparirà subito. Trascinala liberamente e allineala con i tasti freccia.</p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-card-icon bg-pastel-purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3>3. Esporta PDF Firmato</h3>
+          <p>Fai clic su "Scarica PDF": il motore locale unisce il documento originale con le firme vettoriali in alta risoluzione pronta per l'invio legale.</p>
+        </div>
+
+        <div class="help-card full-width">
+          <h3>⌨️ Tabella Scorciatoie Rapide da Tastiera</h3>
           <table class="shortcuts-table">
             <thead>
-              <tr><th>Comando</th><th>Tasto Rapido</th><th>Descrizione</th></tr>
+              <tr><th>Comando</th><th>Scorciatoia</th><th>Descrizione</th></tr>
             </thead>
             <tbody>
-              <tr><td>Apri/Chiudi Drawer</td><td><kbd>Ctrl + B</kbd></td><td>Mostra o nasconde la barra laterale per espandere il PDF</td></tr>
-              <tr><td>Salva Progetto</td><td><kbd>Ctrl + S</kbd></td><td>Salva il documento nell'archivio locale</td></tr>
-              <tr><td>Stampa Diretta</td><td><kbd>Ctrl + P</kbd></td><td>Stampa direttamente dal browser</td></tr>
+              <tr><td>Espandi a Tutto Schermo</td><td><kbd>Ctrl + B</kbd></td><td>Mostra / Nasconde la barra laterale per il massimo spazio di lettura</td></tr>
+              <tr><td>Salva Progetto</td><td><kbd>Ctrl + S</kbd></td><td>Salva il documento corrente nell'archivio protetto su disco</td></tr>
+              <tr><td>Stampa Diretta</td><td><kbd>Ctrl + P</kbd></td><td>Stampa direttamente dal browser predefinito</td></tr>
               <tr><td>Micro-spostamento Data</td><td><kbd>↑ ↓ ← →</kbd></td><td>Sposta la casella della data di 1 pixel per adagiarla sulla riga</td></tr>
               <tr><td>Spostamento Rapido Data</td><td><kbd>Shift + Frecce</kbd></td><td>Sposta la casella della data di 5 pixel</td></tr>
               <tr><td>Chiudi Finestre / Menu</td><td><kbd>Esc</kbd></td><td>Chiude modali QR, dropdown e finestre di dialogo</td></tr>
@@ -556,16 +588,19 @@
         </div>
 
         <!-- Privacy & Architettura Locale -->
-        <div class="help-guide-card full-width">
-          <h2>🔒 Massima Riservatezza & Conformità Locale (100% Offline)</h2>
+        <div class="help-card full-width privacy-banner">
+          <div class="privacy-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <h2>100% Offline & Riservatezza Locale Garantita</h2>
+          </div>
           <div class="privacy-badges-row">
-            <div class="privacy-pill">✓ Nessun Cloud esterno</div>
+            <div class="privacy-pill">✓ Zero Cloud esterno</div>
             <div class="privacy-pill">✓ Nessun dato lascia il tuo PC</div>
             <div class="privacy-pill">✓ Piena conformità GDPR e segreto professionale</div>
-            <div class="privacy-pill">✓ Funziona sulla rete Wi-Fi locale</div>
+            <div class="privacy-pill">✓ Connessione diretta via Wi-Fi LAN</div>
           </div>
-          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.7; margin-top: 14px;">
-            DocuTouchPDF è progettato per funzionare interamente nella memoria del tuo computer e nella rete locale Wi-Fi tra PC e smartphone. I documenti PDF originali e firmati risiedono unicamente nella cartella protetta <code>saved_projects/</code> sul disco fisso del tuo PC.
+          <p class="privacy-desc">
+            DocuTouchPDF viene eseguito unicamente nella memoria del tuo computer e nella rete locale Wi-Fi tra PC e smartphone. I documenti PDF e le firme non raggiungono mai server terzi.
           </p>
         </div>
       </div>
@@ -587,7 +622,7 @@
 
       <div class="dropzone-box" id="dropzone">
         <div class="dropzone-icon">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
         </div>
         <div class="dropzone-title">Trascina qui il tuo file PDF reale</div>
         <div class="dropzone-desc">oppure fai clic per selezionarlo dal tuo computer</div>
@@ -607,7 +642,7 @@
   <!-- MODAL: QR CODE ISTANTANEO AL CLIC         -->
   <!-- ========================================== -->
   <div class="modal-backdrop" id="modal-qr">
-    <div class="modal-card" style="max-width: 500px;">
+    <div class="modal-card" style="max-width: 480px;">
       <div class="modal-header">
         <h2 class="modal-title">
           <img src="assets/logo.png" style="width: 22px; height: 22px; border-radius: 5px;" alt="Logo">
@@ -631,17 +666,17 @@
           <span id="qr-status-text">In attesa di scansione...</span>
         </div>
 
-        <div id="modal-live-box" style="display: none; width: 100%; margin-top: 10px;">
-          <div style="font-size: 11.5px; color: #34d399; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+        <div id="modal-live-box" style="display: none; width: 100%; margin-top: 12px;">
+          <div class="live-stream-header">
             <span class="status-dot connected"></span> Live Streaming dal Telefono:
           </div>
-          <div style="background: #ffffff; border-radius: 10px; height: 100px; position: relative; box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);">
+          <div class="live-monitor-box">
             <canvas id="qr-monitor-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
           </div>
         </div>
 
-        <div style="font-size: 12px; color: var(--text-muted); word-break: break-all; margin-top: 8px;">
-          Oppure apri l'URL: <a id="qr-direct-link" href="#" target="_blank" style="color: #60a5fa;"></a>
+        <div class="qr-direct-link-row">
+          Oppure apri l'URL: <a id="qr-direct-link" href="#" target="_blank"></a>
         </div>
       </div>
     </div>
@@ -653,7 +688,7 @@
     <span id="toast-message">Notifica</span>
   </div>
 
-  <!-- Librerie Locali -->
+  <!-- Librerie Locali PDF.js -->
   <script src="vendor/pdf.min.js"></script>
   <script src="vendor/pdf-lib.min.js"></script>
   <!-- Script Applicativo Desktop -->

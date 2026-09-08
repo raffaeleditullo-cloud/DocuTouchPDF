@@ -1,15 +1,15 @@
-/* DocuTouch Mobile Touchpad Stylesheet */
+/* DocuTouch Mobile Touchpad Stylesheet - Street Luxury Google Edition */
 :root {
-  --bg-mobile: #090d16;
-  --bg-card: #131b2e;
-  --accent-primary: #3b82f6;
-  --accent-glow: rgba(59, 130, 246, 0.4);
-  --success: #10b981;
-  --danger: #ef4444;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bg-mobile: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --accent-primary: #1A73E8;
+  --accent-glow: rgba(26, 115, 232, 0.35);
+  --success: #059669;
+  --danger: #DC2626;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-subtle: #E2E8F0;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -303,7 +303,7 @@ html, body {
 .completed-screen {
   position: absolute;
   inset: 0;
-  background: rgba(9, 13, 22, 0.98);
+  background: rgba(248, 250, 252, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -326,15 +326,15 @@ html, body {
 .completed-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
-  border: 2px solid rgba(16, 185, 129, 0.4);
+  background: #ECFDF5;
+  border: 2px solid #A7F3D0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40px;
   margin-bottom: 22px;
-  box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.2);
   animation: pulse-icon 2s infinite ease-in-out;
 }
 
@@ -346,13 +346,13 @@ html, body {
 .completed-title {
   font-size: 24px;
   font-weight: 800;
-  color: #ffffff;
+  color: #0F172A;
   margin-bottom: 12px;
 }
 
 .completed-desc {
   font-size: 14px;
-  color: #94a3b8;
+  color: #64748B;
   line-height: 1.6;
   max-width: 300px;
 }
