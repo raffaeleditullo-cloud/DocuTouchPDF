@@ -57,6 +57,15 @@ app.get('/api/info', (req, res) => {
   });
 });
 
+// Endpoint per chiusura pulita dell'applicazione
+app.post('/api/shutdown', (req, res) => {
+  res.json({ success: true, message: 'Server DocuTouchPDF in fase di arresto...' });
+  setTimeout(() => {
+    process.exit(0);
+  }, 400);
+});
+
+
 // Endpoint generatore QR Code
 app.get('/api/qr', async (req, res) => {
   const text = req.query.url;

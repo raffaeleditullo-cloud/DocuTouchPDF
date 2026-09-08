@@ -78,11 +78,13 @@ Firmare contratti o moduli PDF sul computer usando il mouse è spesso frustrante
    installer_output/DocuTouchPDF_Setup_v1.0.0.exe
    ```
 2. Segui la procedura guidata (in italiano o inglese).
-3. L'installer creerà:
+3. L'installer configurerà:
    - Icona sul Desktop: **DocuTouchPDF PRO**
    - Icona nel Menu Start: **DocuTouchPDF PRO**
    - Collegamento rapido alla cartella locale dei progetti salvati
-   - Launcher nativo Windows (`DocuTouchPDF.exe`) con icona nella barra delle notifiche (System Tray).
+   - Collegamento rapido per arrestare l'applicazione
+   - Apertura fluida in modalità finestra nativa (Microsoft Edge / Chrome App Mode, senza barre di navigazione o schede)
+   - Architettura 100% pulita e sicura, compatibile con tutti gli antivirus (Windows Defender, McAfee, Norton, Bitdefender, ecc.) senza falsi positivi.
 
 ### Metodo 2: Esecuzione Portatile da Sorgente
 Requisiti: [Node.js](https://nodejs.org/) (versione 18 o superiore).
@@ -98,23 +100,20 @@ npm install
 # 3. Avvia l'applicazione
 npm start
 ```
-Oppure fai doppio clic su [`start.bat`](file:///c:/Users/stree/Desktop/Firma%20PDF/start.bat).  
-L'applicazione si aprirà automaticamente nel tuo browser predefinito su **`http://localhost:3000`**.
+Oppure fai doppio clic su [`start.bat`](file:///c:/Users/stree/Desktop/Firma%20PDF/start.bat) o [`DocuTouchPDF.vbs`](file:///c:/Users/stree/Desktop/Firma%20PDF/DocuTouchPDF.vbs).  
+L'applicazione si aprirà automaticamente come App Desktop su **`http://localhost:3000`**.
+
+Per arrestare il server in background, fai doppio clic su [`stop.bat`](file:///c:/Users/stree/Desktop/Firma%20PDF/stop.bat) oppure seleziona *"Esci dall'Applicazione"* dal menù Documento.
 
 ---
 
 ## 🛠️ Come Compilare l'Installer con Inno Setup
 
 Se desideri rigenerare l'installer Windows:
-1. Compila il launcher nativo C#:
-   ```cmd
-   "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /target:winexe /win32icon:public\assets\app.ico /out:DocuTouchPDF.exe scripts\Launcher.cs /reference:System.Windows.Forms.dll /reference:System.Drawing.dll
-   ```
-2. Compila lo script Inno Setup:
-   ```cmd
-   ISCC.exe DocuTouchPDF_Setup.iss
-   ```
-   Il file di installazione completato verrà salvato in `installer_output/DocuTouchPDF_Setup_v1.0.0.exe`.
+```cmd
+ISCC.exe DocuTouchPDF_Setup.iss
+```
+Il file di installazione completato verrà salvato in `installer_output/DocuTouchPDF_Setup_v1.0.0.exe`.
 
 ---
 
@@ -135,14 +134,15 @@ Se desideri rigenerare l'installer Windows:
 
 ```
 DocuTouchPDF/
-├── DocuTouchPDF.exe          # Launcher nativo Windows C# (System Tray & Silent Server)
+├── DocuTouchPDF.vbs          # Launcher nativo Windows (Silenzioso, App Mode, 0 Falsi Positivi)
 ├── DocuTouchPDF_Setup.iss    # Script di compilazione installer Inno Setup
-├── server.js                 # Server Node.js (Express, WebSocket streaming, API progetti)
+├── server.js                 # Server Node.js (Express, WebSocket streaming, API progetti, /shutdown)
 ├── package.json              # Configurazione e dipendenze del progetto
 ├── README.md                 # Manuale d'uso completo e documentazione
 ├── start.bat                 # Script di avvio rapido con doppio clic
+├── stop.bat                  # Script di arresto pulito del server locale
 ├── scripts/
-│   ├── Launcher.cs           # Sorgente C# del launcher nativo Windows
+│   ├── Launcher.cs           # Sorgente C# del launcher standalone
 │   └── make_icon.ps1         # Script per generazione icone .ico multi-risoluzione
 ├── saved_projects/           # Archivio locale protetto su disco per i documenti PDF
 └── public/                   # Interfaccia grafica completa della suite

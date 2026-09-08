@@ -292,6 +292,23 @@
     });
   }
 
+  const itemDocQuit = document.getElementById('item-doc-quit');
+  if (itemDocQuit) {
+    itemDocQuit.addEventListener('click', async () => {
+      closeAllDropdowns();
+      if (confirm('Vuoi arrestare il server e chiudere DocuTouchPDF?')) {
+        showToast('Chiusura di DocuTouchPDF in corso...', '🚪');
+        try {
+          await fetch('/api/shutdown', { method: 'POST' });
+        } catch (e) {}
+        setTimeout(() => {
+          window.close();
+          window.location.href = 'about:blank';
+        }, 300);
+      }
+    });
+  }
+
   if (itemToolZoomIn) {
     itemToolZoomIn.addEventListener('click', () => {
       closeAllDropdowns();
