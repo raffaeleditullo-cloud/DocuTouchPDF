@@ -1,0 +1,16 @@
+# Directory dipendenze
+node_modules/
+
+# Archivio locale progetti privati (non caricare contratti personali su GitHub)
+saved_projects/*
+!saved_projects/.gitkeep
+
+# Output dell'installer (da pubblicare nelle Release di GitHub)
+installer_output/
+
+# File di sistema e log
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+npm-debug.log*

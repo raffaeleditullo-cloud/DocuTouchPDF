@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>DocuTouchPDF - Touchpad di Firma</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/touchpad.css">
+</head>
+<body>
+  <div class="touchpad-wrapper">
+    <!-- Header -->
+    <header class="mobile-header">
+      <div class="mobile-title">
+        <img src="assets/logo.png" style="width: 24px; height: 24px; border-radius: 6px;" alt="Logo">
+        <span>DocuTouch<span style="color:#38bdf8;">PDF</span></span>
+      </div>
+      <div id="connection-status" class="mobile-status-badge">
+        <span class="dot-indicator"></span>
+        <span id="status-text">Connessione...</span>
+      </div>
+    </header>
+
+    <!-- Canvas Area -->
+    <main class="canvas-container" id="canvas-container">
+      <canvas id="signature-canvas"></canvas>
+      <div class="canvas-guide" id="canvas-guide">
+        <span class="guide-text">Firma qui sopra</span>
+        <span class="guide-icon">🖋️</span>
+      </div>
+    </main>
+
+    <!-- Palette Strumenti -->
+    <div class="mobile-palette">
+      <div class="color-picker">
+        <div class="color-option color-black active" data-color="#0f172a" title="Nero"></div>
+        <div class="color-option color-blue" data-color="#1d4ed8" title="Blu Stilografica"></div>
+        <div class="color-option color-red" data-color="#dc2626" title="Rosso"></div>
+      </div>
+      <div class="thickness-picker">
+        <button class="thick-btn" data-size="2">Fine</button>
+        <button class="thick-btn active" data-size="3.5">Medio</button>
+        <button class="thick-btn" data-size="5">Tratto</button>
+      </div>
+    </div>
+
+    <!-- Azioni -->
+    <footer class="mobile-actions">
+      <button id="btn-clear" class="btn-mobile btn-clear">
+        <span>🗑️</span> Pulisci
+      </button>
+      <button id="btn-submit" class="btn-mobile btn-submit">
+        <span>✅</span> Conferma Firma
+      </button>
+    </footer>
+  </div>
+
+  <!-- Schermata di Scelta Post-Firma -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon">✓</div>
+    <h2 class="success-title">Firma Inviata al PC!</h2>
+    <p class="success-desc">La firma è stata posizionata sul foglio del computer. Come vuoi procedere?</p>
+    
+    <div class="success-buttons-group">
+      <button id="btn-close-session" class="btn-mobile btn-submit-close">
+        <span>✅</span> Conferma e Chiudi Sessione
+      </button>
+      <button id="btn-sign-again" class="btn-mobile btn-clear">
+        <span>✍️</span> Fai un'altra firma
+      </button>
+    </div>
+  </div>
+
+  <!-- Schermata Sessione Conclusa Definitivamente -->
+  <div class="completed-screen" id="completed-screen">
+    <div class="completed-icon">🎉</div>
+    <h2 class="completed-title">Sessione Conclusa!</h2>
+    <p class="completed-desc">Tutte le firme sono state trasmesse e registrate con successo sul computer.<br><br>Puoi chiudere questa scheda del browser in tutta sicurezza.</p>
+    <button id="btn-reopen-pad" class="btn-mobile btn-clear" style="flex: none; padding: 10px 20px; font-size: 13px; margin-top: 14px;">
+      🔄 Riapri Touchpad se serve
+    </button>
+  </div>
+
+  <script src="js/touchpad.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "docutouchpdf",
+  "version": "1.0.0",
+  "description": "DocuTouchPDF - Firma & Annotazione PDF via Smartphone Touchscreen",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "pdf",
+    "signature",
+    "touchscreen",
+    "smartphone",
+    "touchpad"
+  ],
+  "author": "DocuTouchPDF",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^3.11.174",
+    "qrcode": "^1.5.4",
+    "ws": "^8.21.3"
+  }
+}
