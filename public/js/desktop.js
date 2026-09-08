@@ -185,7 +185,7 @@
     } else {
       if (editorSubcontrols) editorSubcontrols.style.display = 'none';
       if (editorActionsGroup) editorActionsGroup.style.display = 'none';
-      if (dashboardActionsGroup) dashboardActionsGroup.style.display = 'block';
+      if (dashboardActionsGroup) dashboardActionsGroup.style.display = 'flex';
     }
 
     if (viewName === 'dashboard') {
