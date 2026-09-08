@@ -125,31 +125,23 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   cursor: pointer;
   user-select: none;
 }
 
-.brand-logo-container {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.18);
-  border: 1px solid rgba(26, 115, 232, 0.15);
+.brand-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
   transition: transform var(--transition-normal);
 }
-.brand:hover .brand-logo-container {
-  transform: scale(1.05) rotate(-2deg);
-}
-
-.brand-logo-img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.brand:hover .brand-logo-img {
+  transform: scale(1.08) rotate(-2deg);
 }
 
 .brand-text-block {
